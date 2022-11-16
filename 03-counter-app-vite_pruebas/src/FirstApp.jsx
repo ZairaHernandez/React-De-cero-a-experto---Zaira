@@ -5,25 +5,28 @@ export const FirstApp = ({ title, subTitle, name }) => {
     // if (!title) {
     //     throw new Error('El title no existe');
     // }
-    return (
-        <>
-            <h1> {title} </h1>
-            {/* {<code>{ JSON.stringify( newMesage )}</code>} */}
-            <p> {subTitle} </p>
-            <p> {name} </p>
-        </>
-    );
-};
+   return (
+    <>
+      <h1 data-testid="test-title"> { title } </h1>
+      {/* <code>{ JSON.stringify( newMessage ) }</code> */}
+      <p>{ subTitle }</p>
+      <p>{ subTitle }</p>
+      <p>{ name }</p>
+    </>
+  )
+}
+
 
 FirstApp.propTypes = {
-    title: PropTypes.string.isRequired,
-    subTitle: PropTypes.string,
-};
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string,
+}
 
 FirstApp.defaultProps = {
-    //title: 'No hay título',
-    subTitle: 'No hay subtítulo',
-    name: 'Zaira Hernandez'
+  // title: 'No hay título',
+  name: 'Zaira Hernandez',
+  subTitle: 'No hay subtítulo',
+ 
 }
 
 /*
