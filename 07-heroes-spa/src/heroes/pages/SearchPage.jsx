@@ -9,14 +9,17 @@ export const SearchPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+
   const { q = "" } = queryString.parse(location.search);
   const heroes = getHeroesByName(q);
 
   const showSearch = q.length === 0;
   const showError = q.length > 0 && heroes.length === 0;
 
+
   const { searchText, onInputChange } = useForm({
     searchText: q,
+
   });
 
   const onSearchSubmit = (event) => {
@@ -43,8 +46,7 @@ export const SearchPage = () => {
               name="searchText"
               autoComplete="off"
               value={searchText}
-              onChange={onInputChange}
-            />
+              onChange={onInputChange} />
 
             <button className="btn btn-outline-primary mt-1">Search</button>
           </form>

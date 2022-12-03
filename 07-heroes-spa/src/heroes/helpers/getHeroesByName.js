@@ -1,5 +1,6 @@
 import { heroes } from "../data/heroes";
 
+
 export const getHeroesByName = (name = "") => {
   name = name.toLocaleLowerCase().trim();
 

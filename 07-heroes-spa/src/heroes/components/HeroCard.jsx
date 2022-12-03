@@ -6,6 +6,7 @@ const CharactersByHero = ({ alter_ego, characters }) => {
   return alter_ego === characters ? <></> : <p>{characters}</p>;
 };
 
+
 export const HeroCard = ({
   id,
   superhero,
@@ -14,10 +15,10 @@ export const HeroCard = ({
   first_appearance,
   characters,
 }) => {
+    
   const heroImageUrl = `/assets/heroes/${id}.jpg`;
 
   // const charactesByHero =  (<p>{ characters }</p>);
-
   return (
     <div className="col animate__animated animate__fadeIn">
       <div className="card">
